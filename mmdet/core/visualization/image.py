@@ -149,11 +149,12 @@ def imshow_det_bboxes(img,
             color=text_color,
             fontsize=font_size,
             verticalalignment='top',
-            horizontalalignment='left')
+            horizontalalignment='right')
         if segms is not None:
+            # break
             color_mask = mask_colors[labels[i]]
             mask = segms[i].astype(bool)
-            img[mask] = img[mask] * 0.5 + color_mask * 0.5
+            # img[mask] = img[mask] * 0.5 + color_mask * 0.5
 
     plt.imshow(img)
 

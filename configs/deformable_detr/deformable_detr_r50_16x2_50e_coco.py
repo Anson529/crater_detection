@@ -158,8 +158,8 @@ data = dict(
 # optimizer
 optimizer = dict(
     type='AdamW',
-    lr=2e-4,
-    weight_decay=0.0001,
+    lr=2e-5,
+    weight_decay=0.00001,
     paramwise_cfg=dict(
         custom_keys={
             'backbone': dict(lr_mult=0.1),

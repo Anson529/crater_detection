@@ -69,12 +69,10 @@ def main():
     dataset = build_dataset(cfg.data.train)
 
     progress_bar = mmcv.ProgressBar(len(dataset))
-
     for item in dataset:
         filename = os.path.join(args.output_dir,
                                 Path(item['filename']).name
                                 ) if args.output_dir is not None else None
-
         gt_masks = item.get('gt_masks', None)
         if gt_masks is not None:
             gt_masks = mask2ndarray(gt_masks)

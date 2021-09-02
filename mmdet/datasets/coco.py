@@ -436,6 +436,7 @@ class CocoDataset(CustomDataset):
                 raise KeyError(f'{metric} is not in results')
             try:
                 predictions = mmcv.load(result_files[metric])
+                print (result_files[metric])
                 if iou_type == 'segm':
                     # Refer to https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/coco.py#L331  # noqa
                     # When evaluating mask AP, if the results contain bbox,
